@@ -5,6 +5,11 @@ import cloudscraper
 
 app = Flask(__name__)
 
+# 默认路由/，支持GET方法
+@app.route('/', methods=['GET'])
+def index():
+    return 'Hello World!'
+
 @app.route('/proxy', methods=['GET'])
 def proxy():
 
